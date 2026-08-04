@@ -24,7 +24,7 @@ spec:
 
       - name: product-app
 
-        image: ajithkumar242/product-catalogue:v1
+        image: ajithkumar242/product-catalogue:v2
 
         ports:
         - containerPort: 5000
