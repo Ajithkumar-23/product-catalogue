@@ -25,6 +25,7 @@ spec:
       - name: product-app
 
         image: ajithkumar242/product-catalogue:v1
+        imagePullPolicy: Always
 
         ports:
         - containerPort: 5000
