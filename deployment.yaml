@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+  name: product-app
+
+spec:
+  replicas: 2
+
+  selector:
+    matchLabels:
+      app: product-app
+
+  template:
+
+    metadata:
+      labels:
+        app: product-app
+
+    spec:
+
+      containers:
+
+      - name: product-app
+
+        image: ajithkumar242/product-catalogue:v1
+
+        ports:
+        - containerPort: 5000
+
+        envFrom:
+        - configMapRef:
+            name: product-config
